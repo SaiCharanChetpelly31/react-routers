@@ -1,17 +1,17 @@
-import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { Blogs } from "./pages/Blogs";
 import { BookRoutes } from "./pages/BookRoutes";
 import { Contact } from "./pages/Contact";
 import { Home } from "./pages/Home";
 import { Layout } from "./pages/Layout";
 import { Nopage } from "./pages/Nopage";
-import "./styles.css"
+import "./styles.css";
 function App() {
   return (
     <>
-    <Routes>
-      <Route path="/books" element={<h1>Extra content</h1>}/>
-    </Routes>
+      <Routes>
+        <Route path="/books" element={<h1>Extra content</h1>} />
+      </Routes>
       <nav>
         <ul>
           <li>
@@ -27,7 +27,9 @@ function App() {
             <NavLink to="/contact">contact</NavLink>
           </li>
           <li>
-            <NavLink end to="/books">books</NavLink>
+            <NavLink end to="/books">
+              books
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -38,7 +40,7 @@ function App() {
         <Route path="/layout" element={<Layout />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/nopage" element={<Nopage />} />
-        <Route path="/books/*" element={<BookRoutes />}/>
+        <Route path="/books/*" element={<BookRoutes />} />
         <Route path="*" element={<Nopage />} />
       </Routes>
     </>
